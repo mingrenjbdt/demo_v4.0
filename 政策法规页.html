@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>战略性新兴产业专业知识服务系统</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+	
+	<link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" />
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+    <link href="./css/font-awesome.css" rel="stylesheet" />
+    
+    <link href="./css/base-admin.css" rel="stylesheet" />
+	<link href="./css/base-admin-demo.css" rel="stylesheet" />
+    <link href="./css/base-admin-responsive.css" rel="stylesheet" />
+    
+    <link href="./css/pages/faq.css" rel="stylesheet" /> 
+
+	<!-- Tree 2013/8/31LMR -->
+	<link rel="stylesheet" href="./css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.core-3.5.min.js"></script>
+	<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.excheck-3.5.min.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true
+			},		
+			chkboxType:{
+				"Y" : "ps", 
+				"N" : "ps" 
+			},
+			view: {
+				showIcon: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"所有产业分类", open:true},
+			{ id:11, pId:1, name:"节能环保产业", open:true},
+			{ id:111, pId:11, name:"高效节能产业"},
+			{ id:112, pId:11, name:"先进环保产业"},
+			{ id:113, pId:11, name:"资源循环利用产业"},
+			
+			{ id:12, pId:1, name:"新一代信息技术产业", open:true},
+			{ id:121, pId:12, name:"下一代信息网络产业"},
+			{ id:122, pId:12, name:"电子核心基础产业"},
+			{ id:122, pId:12, name:"高端软件和新兴信息服务产业"},
+			
+			{ id:13, pId:1, name:"生物产业", open:true},
+			{ id:131, pId:13, name:"生物医药产业"},
+			{ id:132, pId:13, name:"生物医学工程产业"},
+			{ id:133, pId:13, name:"生物农业产业"},
+			{ id:134, pId:13, name:"生物制造产业"},
+			
+			{ id:14, pId:1, name:"高端装备制造产业", open:true},
+			{ id:141, pId:14, name:"航空装备产业"},
+			{ id:142, pId:14, name:"卫星及应用产业"},
+			{ id:143, pId:14, name:"轨道交通装备产业"},
+			{ id:144, pId:14, name:"海洋工程装备产业"},
+			{ id:145, pId:14, name:"智能制造装备产业"},
+			
+			{ id:15, pId:1, name:"新能源产业", open:true},
+			{ id:151, pId:15, name:"核电技术产业"},
+			{ id:152, pId:15, name:"风能产业"},
+			{ id:153, pId:15, name:"太阳能产业"},
+			{ id:154, pId:15, name:"生物质能产业"},
+			
+			{ id:16, pId:1, name:"新材料产业", open:true},
+			{ id:161, pId:16, name:"新型功能材料产业"},
+			{ id:162, pId:16, name:"先进结构材料产业"},
+			{ id:163, pId:16, name:"高性能复合材料产业"},
+						
+			{ id:17, pId:1, name:"新能源汽车产业", open:true},
+			{ id:171, pId:17, name:"纯电动汽车和插电式混合动力汽车"},
+		];
+
+				var zNodes2 =[
+		
+			{ id:1, pId:0, name:"所有信息分类", open:true},
+			{ id:11, pId:1, name:"政策法规    (5)"},
+			{ id:12, pId:1, name:"技术前沿    (8)"},
+			{ id:13, pId:1, name:"领域要闻    (20)"},
+			{ id:14, pId:1, name:"高端视点    (36)"},
+			{ id:15, pId:1, name:"项目公告    (17)"},
+			{ id:16, pId:1, name:"研究报告    (25)"},
+			{ id:17, pId:1, name:"企业咨询    (12)"},
+			{ id:18, pId:1, name:"论坛通知    (6)"},
+			
+		];
+
+		$(document).ready(function(){
+			var ccc=$("#treeDemo"),
+			ddd=$("#treeInfoClass");
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeInfoClass"), setting, zNodes2);
+		});
+
+		//输入提示
+		$(document).ready(function(){
+			$('#prependedInput').typeahead(
+				{
+					source:["1111","222","333","444","aaa","555"], 
+					items:8,
+					minLength:1,
+
+				}
+			);
+		});
+	</SCRIPT>
+	<!-- Tree 2013/8/31LMR/end -->
+	
+	
+	<!-- Tree 2013/8/31ZYB/end -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="http://images.webofknowledge.com/WOKRS511B5P1.01/javascript/Async.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<a class="brand" href="./">
+				战略性新兴产业专业知识服务系统				
+			</a>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li class="dropdown">
+						
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-cog"></i>
+							设置
+							<b class="caret"></b>
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="javascript:;">账户设置</a></li>
+							<li><a href="javascript:;">隐私设置</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">帮助</a></li>
+						</ul>
+						
+					</li>
+			
+					<li class="dropdown">
+						
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-user"></i> 
+							张三 Tsinghua
+							<b class="caret"></b>
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="javascript:;">我的信息</a></li>
+							<li><a href="javascript:;">我的群组</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">注销</a></li>
+						</ul>
+						
+					</li>
+				</ul>
+			
+				<form class="navbar-search pull-right" />
+					<input type="text" class="search-query" placeholder="Search" />
+				</form>
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+    
+
+
+
+    
+<div class="subnavbar">
+
+	<div class="subnavbar-inner">
+	
+		<div class="container">
+
+			<ul class="mainnav">
+			
+				<li>
+					<a href="./首页.html">
+						<i class="icon-home"></i>
+						<span>首页</span>
+					</a>	    				
+				</li>
+				<li>					
+					<a href="./专家圈.html" class="dropdown-toggle">
+						<i class="icon-user"></i>
+						<span>专家圈</span>
+					</a>	  				
+				</li>
+				
+				<li>
+					<a href="./admin/index.html">
+						<i class="icon-th-large"></i>
+						<span>项目协同</span>
+					</a>    				
+				</li>
+											
+				<li class="active">
+					<a href="./知识搜索.html">
+						<i class="icon-search"></i>
+						<span>知识搜索</span>
+					</a>	    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-share-alt"></i>
+						<span>更多</span>
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="./更多_图表统计.html">图表统计</a></li>
+						<li><a href="./更多_账户设置.html">账户设置</a></li>
+						<li class="divider"></li>
+						<li><a href="./更多_登陆.html">登陆</a></li>
+						<li><a href="./更多_注册.html">注册</a></li>
+						<li><a href="./更多_错误.html">错误页面</a></li>
+					</ul>    				
+				</li>
+			</ul>
+
+		</div> <!-- /container -->
+	
+	</div> <!-- /subnavbar-inner -->
+
+</div> <!-- /subnavbar -->
+    
+    
+<div class="main">
+	
+	<div class="main-inner">
+
+	    <div class="container">
+	
+	      <div class="row">
+		  	<div class="span3">
+						
+				<!--<div class="widget widget-plain">
+					
+					<div class="widget-content">
+						
+						<a href="javascript:;" class="btn btn-large btn-warning btn-support-ask">Ask A Question</a>	
+						
+						
+						<a href="javascript:;" class="btn btn-large btn-support-contact">Contact Support</a>
+						
+						
+						
+					</div> <!-- /widget-content -->
+						
+				<!-- </div> --><!-- /widget -->
+				
+				
+				
+				<div class="widget widget-box">
+					
+					<div class="widget-header">	
+						<h3>精炼检索结果</h3>			
+					</div> <!-- /widget-header -->
+					
+					<div class="widget-content">
+					
+						<div class="accordion" id="accordion-432917">
+						
+							<div class="accordion-group">
+								
+								<div class="accordion-heading">
+								
+									<a class="accordion-toggle" contenteditable="true" data-parent="#accordion-432917" data-toggle="collapse" href="#accordion-element-969346"><i class="icon-th-list"></i>&nbsp;&nbsp;按行业分类检索</a>
+									
+								</div>
+								
+								<div class="accordion-body in collapse" id="accordion-element-969346" style="height: auto;">
+								
+									<div class="accordion-inner" contenteditable="true"><div><ul id="treeDemo" class="ztree"></ul></div></div>
+									
+								</div>
+								
+							</div> <!-- /accordion-group -->
+							
+						</div> <!-- /accordion -->
+						
+					</div> <!-- /widget-content -->
+					
+				</div> <!-- /widget -->
+				
+			</div> <!-- /span4 -->
+	      	
+	      	<div class="span9">
+			
+				<div class="widget">
+				
+					<div class="widget-content">
+					
+						<div class="tabbable">
+				
+							<ul class="nav nav-tabs">
+								
+								<li class="active"><a href="#profile" data-toggle="tab">检索</a></li>
+								
+								<li class=""><a href="#settings" data-toggle="tab">高级检索</a></li>
+								
+								<li class=""><a href="#settings1" data-toggle="tab">专业检索</a></li>
+								
+							</ul>
+						
+							<br>
+						
+							<div class="tab-content">
+								
+								<div class="tab-pane active" id="profile">
+									<form id="edit-profile" class="form-horizontal">
+									
+										<fieldset>
+										
+											<div class="row" style="float:left;dispaly:block;">
+											
+												<div class="span4">
+
+													<select>
+												
+														<option>标准名称</option>
+													
+														<option>标准号</option>
+													
+														<option>关键词</option>
+													
+													</select>
+												
+													<input type="text" placeholder="Text input">
+													
+												</div>
+												
+												<div class="span4 inline">
+												
+													<select>
+												
+													<option>并含</option>
+													
+													<option>除去</option>
+													
+												</select>
+												
+												<input type="text" placeholder="Text input">
+												
+												</div>
+												
+											</div>
+										
+										</fieldset>
+									</form>
+								</div>
+								
+								<div class="tab-pane" id="settings">
+									
+									<form id="edit-profile2" class="form-horizontal">
+									
+										<fieldset>
+										
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->	
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->	
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->
+											
+											<div class="widget widget-table">
+						
+												<div class="widget-header">
+												
+													<span class="icon-eye-open"></span>
+							
+													<h3>节能环保领域</h3>
+							
+												</div> <!-- .widget-header -->
+						
+												<div class="widget-content">
+												
+													<table class="table table-bordered table-striped" style="">
+								
+														<thead>
+													
+															<tr>								
+															
+																<th style="width:90%">企业</th>
+															
+																<th style="width:10%">发布日期</th>								
+														
+															</tr>
+														
+														</thead>
+						
+														<tbody>
+														
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+															
+															<tr>
+															
+																<td class="description"><a href="">天津创业环保集团股份有限公司</a></td>
+															
+																<td class="value"><span>2013-08-11</span></td>
+																
+															</tr>
+														
+														</tbody>
+													
+													</table>
+							
+												</div> <!-- .widget-content -->
+						
+											</div> <!-- /widget -->
+											
+										</fieldset>
+										
+									</form>
+									
+								</div>
+								
+							</div>
+						  
+						</div>
+					
+					</div> <!-- /widget content -->	
+				
+				</div><!-- /widget -->	
+	      		
+	      	</div>	
+
+	      </div> <!-- /row -->
+	
+	    </div> <!-- /container -->
+    
+	</div> <!-- /main-inner -->
+	    
+</div> <!-- /main -->
+    
+
+
+<div class="extra">
+
+	<div class="extra-inner">
+
+		<div class="container">
+
+			<div class="row">
+				
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">关于</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">关于我们</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">中国工程院</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">清华大学</p></a></li>	
+						<li><a href="javascript:;"><p class="text-center">联系我们</p></a></li>						
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">支持</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">常见问题</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">提问</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">视频教程</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">发送反馈</p></a></li>						
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">法律</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">客户隐私政策</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">适用条款</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">安全</p></a></li>
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    		</div> <!-- /row -->
+
+		</div> <!-- /container -->
+
+	</div> <!-- /extra-inner -->
+
+</div> <!-- /extra -->
+
+
+    
+    
+<div class="footer">
+	
+	<div class="footer-inner">
+		
+		<div class="container">
+			
+			<div class="row">
+				
+    			<div class="span12">
+    				<p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+    			</div> <!-- /span12 -->
+    			
+    		</div> <!-- /row -->
+    		
+		</div> <!-- /container -->
+		
+	</div> <!-- /footer-inner -->
+	
+</div> <!-- /footer -->
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script src="./js/jquery-1.7.2.min.js"></script> -->
+
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+  </body>
+</html>

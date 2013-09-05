@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>战略性新兴产业专业知识服务系统</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+	
+	<link href="./css/bootstrap.css" rel="stylesheet" />
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet" />
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+    <link href="./css/font-awesome.css" rel="stylesheet" />
+    
+    <link href="./css/base-admin.css" rel="stylesheet" />
+	<link href="./css/base-admin-demo.css" rel="stylesheet" />
+    <link href="./css/base-admin-responsive.css" rel="stylesheet" />
+    
+    <link href="./css/pages/faq.css" rel="stylesheet" /> 
+
+	<!-- Tree 2013/8/31LMR -->
+	<link rel="stylesheet" href="./css/zTreeStyle/zTreeStyle.css" type="text/css">
+	<script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.core-3.5.min.js"></script>
+	<script type="text/javascript" src="./js/zTreeJs/jquery.ztree.excheck-3.5.min.js"></script>
+	<!--
+	<script type="text/javascript" src="../../../js/jquery.ztree.exedit-3.5.js"></script>
+	-->
+	<SCRIPT type="text/javascript">
+		var setting = {
+			check: {
+				enable: true
+			},		
+			chkboxType:{
+				"Y" : "ps", 
+				"N" : "ps" 
+			},
+			view: {
+				showIcon: false,
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+
+		var zNodes =[
+			{ id:1, pId:0, name:"所有产业分类", open:true},
+			{ id:11, pId:1, name:"节能环保产业", open:false},
+			{ id:111, pId:11, name:"高效节能产业"},
+			{ id:112, pId:11, name:"先进环保产业"},
+			{ id:113, pId:11, name:"资源循环利用产业"},
+			
+			{ id:12, pId:1, name:"新一代信息技术产业", open:false},
+			{ id:121, pId:12, name:"下一代信息网络产业"},
+			{ id:122, pId:12, name:"电子核心基础产业"},
+			{ id:122, pId:12, name:"高端软件和新兴信息服务产业"},
+			
+			{ id:13, pId:1, name:"生物产业", open:false},
+			{ id:131, pId:13, name:"生物医药产业"},
+			{ id:132, pId:13, name:"生物医学工程产业"},
+			{ id:133, pId:13, name:"生物农业产业"},
+			{ id:134, pId:13, name:"生物制造产业"},
+			
+			{ id:14, pId:1, name:"高端装备制造产业", open:false},
+			{ id:141, pId:14, name:"航空装备产业"},
+			{ id:142, pId:14, name:"卫星及应用产业"},
+			{ id:143, pId:14, name:"轨道交通装备产业"},
+			{ id:144, pId:14, name:"海洋工程装备产业"},
+			{ id:145, pId:14, name:"智能制造装备产业"},
+			
+			{ id:15, pId:1, name:"新能源产业", open:false},
+			{ id:151, pId:15, name:"核电技术产业"},
+			{ id:152, pId:15, name:"风能产业"},
+			{ id:153, pId:15, name:"太阳能产业"},
+			{ id:154, pId:15, name:"生物质能产业"},
+			
+			{ id:16, pId:1, name:"新材料产业", open:false},
+			{ id:161, pId:16, name:"新型功能材料产业"},
+			{ id:162, pId:16, name:"先进结构材料产业"},
+			{ id:163, pId:16, name:"高性能复合材料产业"},
+						
+			{ id:17, pId:1, name:"新能源汽车产业", open:false},
+			{ id:171, pId:17, name:"纯电动汽车和插电式混合动力汽车"},
+		];
+
+				var zNodes2 =[
+		
+			{ id:1, pId:0, name:"所有信息分类", open:true},
+			{ id:11, pId:1, name:"政策法规    (5)"},
+			{ id:12, pId:1, name:"技术前沿    (8)"},
+			{ id:13, pId:1, name:"领域要闻    (20)"},
+			{ id:14, pId:1, name:"高端视点    (36)"},
+			{ id:15, pId:1, name:"项目公告    (17)"},
+			{ id:16, pId:1, name:"研究报告    (25)"},
+			{ id:17, pId:1, name:"企业咨询    (12)"},
+			{ id:18, pId:1, name:"论坛通知    (6)"},
+			
+		];
+
+		$(document).ready(function(){
+			var ccc=$("#treeDemo"),
+			ddd=$("#treeInfoClass");
+			$.fn.zTree.init($("#treeDemo"), setting, zNodes);
+			$.fn.zTree.init($("#treeInfoClass"), setting, zNodes2);
+		});
+
+		//输入提示
+		$(document).ready(function(){
+			$('#prependedInput').typeahead(
+				{
+					source:["1111","222","333","444","aaa","555"], 
+					items:8,
+					minLength:1,
+
+				}
+			);
+		});
+	</SCRIPT>
+	<!-- Tree 2013/8/31LMR/end -->
+	
+	
+	<!-- Tree 2013/8/31ZYB/end -->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="http://images.webofknowledge.com/WOKRS511B5P1.01/javascript/Async.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			
+			<a class="brand" href="./首页.html">
+				<img id="logo" src="img/logo.png" alt="" />
+				战略性新兴产业专业知识服务系统				
+			</a>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right">
+					<li class="dropdown">
+						
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-cog"></i>
+							设置
+							<b class="caret"></b>
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="javascript:;">账户设置</a></li>
+							<li><a href="javascript:;">隐私设置</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">帮助</a></li>
+						</ul>
+						
+					</li>
+			
+					<li class="dropdown">
+						
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-user"></i> 
+							张三 Tsinghua
+							<b class="caret"></b>
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li><a href="javascript:;">我的信息</a></li>
+							<li><a href="javascript:;">我的群组</a></li>
+							<li class="divider"></li>
+							<li><a href="javascript:;">注销</a></li>
+						</ul>
+						
+					</li>
+				</ul>
+			
+				<form class="navbar-search pull-right" />
+					<input type="text" class="search-query" placeholder="Search" />
+				</form>
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+    
+
+
+
+    
+<div class="subnavbar">
+
+	<div class="subnavbar-inner">
+	
+		<div class="container">
+
+			<ul class="mainnav">
+			
+				<li>
+					<a href="./首页.html">
+						<i class="icon-home"></i>
+						<span>首页</span>
+					</a>	    				
+				</li>
+				<li>					
+					<a href="./专家圈.html" class="dropdown-toggle">
+						<i class="icon-user"></i>
+						<span>专家圈</span>
+					</a>	  				
+				</li>
+				
+				<li>
+					<a href="./admin/index.html">
+						<i class="icon-th-large"></i>
+						<span>项目协同</span>
+					</a>    				
+				</li>
+											
+				<li class="active">
+					<a href="./知识搜索.html">
+						<i class="icon-search"></i>
+						<span>知识搜索</span>
+					</a>	    				
+				</li>
+				
+				<li class="dropdown">					
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-share-alt"></i>
+						<span>更多</span>
+						<b class="caret"></b>
+					</a>	
+				
+					<ul class="dropdown-menu">
+						<li><a href="./更多_图表统计.html">图表统计</a></li>
+						<li><a href="./更多_账户设置.html">账户设置</a></li>
+						<li class="divider"></li>
+						<li><a href="./更多_登陆.html">登陆</a></li>
+						<li><a href="./更多_注册.html">注册</a></li>
+						<li><a href="./更多_错误.html">错误页面</a></li>
+					</ul>    				
+				</li>
+			</ul>
+
+		</div> <!-- /container -->
+	
+	</div> <!-- /subnavbar-inner -->
+
+</div> <!-- /subnavbar -->
+    
+    
+<div class="main">
+	
+	<div class="main-inner">
+
+	    <div class="container">
+	
+	      <div class="row">
+		  	<div class="span3">
+						
+				<!--<div class="widget widget-plain">
+					
+					<div class="widget-content">
+						
+						<a href="javascript:;" class="btn btn-large btn-warning btn-support-ask">Ask A Question</a>	
+						
+						
+						<a href="javascript:;" class="btn btn-large btn-support-contact">Contact Support</a>
+						
+						
+						
+					</div> <!-- /widget-content -->
+						
+				<!-- </div> --><!-- /widget -->
+				
+				
+				
+				<div class="widget widget-box">
+					
+					<div class="widget-header">	
+						<h3>精炼检索结果</h3>			
+					</div> <!-- /widget-header -->
+					
+					<div class="widget-content">
+					
+						<div class="accordion" id="accordion-432917">
+						
+							<div class="accordion-group">
+								
+								<div class="accordion-heading">
+								
+									<a class="accordion-toggle" contenteditable="true" data-parent="#accordion-432917" data-toggle="collapse" href="#accordion-element-969346"><i class="icon-th-list"></i>&nbsp;&nbsp;按行业分类检索</a>
+									
+								</div>
+								
+								<div class="accordion-body in collapse" id="accordion-element-969346" style="height: auto;">
+								
+									<div class="accordion-inner" contenteditable="true"><div><ul id="treeDemo" class="ztree"></ul></div></div>
+									
+								</div>
+								
+							</div> <!-- /accordion-group -->
+
+							<div class="accordion-group">
+							
+								<div class="accordion-heading">
+								
+									<a class="accordion-toggle" contenteditable="true" data-parent="#accordion-432917" data-toggle="collapse" href="#accordion-element-88212"><i class="icon-user"></i>&nbsp;&nbsp;按作者姓名检索</a>
+								
+								</div>
+								
+								<div class="accordion-body collapse" id="accordion-element-88212" style="height: 0px;">
+								
+									<div class="accordion-inner" contenteditable="true">
+											
+									        <label class="checkbox"><input type="checkbox" id="inlineCheckbox1" value="option1">邬贺铨&nbsp;&nbsp;&nbsp;&nbsp;(13)</label>
+											
+											<label class="checkbox"><input type="checkbox" id="inlineCheckbox2" value="option2">徐匡迪&nbsp;&nbsp;&nbsp;&nbsp;(12)</label>
+											
+											<label class="checkbox"><input type="checkbox" id="inlineCheckbox3" value="option3">周&nbsp;&nbsp;&nbsp;&nbsp;济&nbsp;&nbsp;&nbsp;&nbsp;(12)</label>
+											
+											<label class="checkbox"><input type="checkbox" id="inlineCheckbox3" value="option3">潘云鹤&nbsp;&nbsp;&nbsp;&nbsp;(12)</label>
+											
+											<label class="checkbox"><input type="checkbox" id="inlineCheckbox3" value="option3">苏&nbsp;&nbsp;&nbsp;&nbsp;竣&nbsp;&nbsp;&nbsp;&nbsp;(12)</label>
+											
+											<label class="checkbox"><input type="checkbox" id="inlineCheckbox3" value="option3">黄&nbsp;&nbsp;&nbsp;&nbsp;萃&nbsp;&nbsp;&nbsp;&nbsp;(12)</label>
+									
+									</div>
+									
+									<p class="text-right"><a>更多...</a></p>
+									
+								</div>
+								
+							</div><!-- /accordion-group -->
+							
+							<div class="accordion-group">
+							
+								<div class="accordion-heading">
+								
+									<a class="accordion-toggle" contenteditable="true" data-parent="#accordion-432917" data-toggle="collapse" href="#accordion-element-88213"><i class="icon-th-large"></i>&nbsp;&nbsp;按信息类型检索</a>
+								
+								</div>
+								
+								<div class="accordion-body collapse" id="accordion-element-88213" style="height: 0px;">
+								
+									<div class="accordion-inner" contenteditable="true">
+											
+									    <div><ul id="treeInfoClass" class="ztree"></ul></div>   
+									
+									</div>
+									
+								</div>
+								
+							</div><!-- /accordion-group -->
+							
+						</div> <!-- /accordion -->
+						
+					</div> <!-- /widget-content -->
+					
+				</div> <!-- /widget -->
+				
+			</div> <!-- /span4 -->
+	      	
+	      	<div class="span9">
+	      		
+	      		<div class="widget">
+						
+					<div class="widget-header">
+					
+						<i class="icon-pushpin"></i>
+						
+						<h3>战略性新兴产业专业知识搜索</h3>
+						
+					</div> <!-- /widget-header -->
+					
+					<div class="widget-content">
+						
+						<!-- <h3>搜&nbsp;&nbsp;&nbsp;&nbsp;索</h3>
+						
+						<br /> -->
+						
+						<!-- <form class="form-search offset2">
+								
+							<div class="input-append">
+								
+								<input type="text" class="span4 search-query" style="height:33px;">
+									
+								<button type="submit" class="btn btn-large btn-primary">搜&nbsp;&nbsp;&nbsp;&nbsp;索</button>
+									
+							</div> -->
+						<div class="span9">
+						
+							<ul class="nav nav-tabs myTab" id="myTab">
+							
+							  <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+							  
+							  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+							  
+							  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+							  
+							  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+							  
+							</ul>
+							 
+							<div class="tab-content myTab span5">
+							  <div class="tab-pane active" id="home">
+									<div class="input-prepend input-append">
+									  <span class="add-on"><i class="icon-search"></i></span>
+									  <input class="span4" id="prependedInput" type="text" data-provide="typeahead" autocomplete="off" placeholder="输入关键字检索">
+									  <button class="btn" type="button">搜索</button>
+									</div>
+									<ul contenteditable="true" class="unstyled inline text-left">
+									  <li>新闻资讯</li>
+									  <li>体育竞技</li>
+									  <li>娱乐八卦</li>
+									  <li>前沿科技</li>
+									</ul>
+								</div>
+							  <div class="tab-pane" id="profile">
+								<div class="input-prepend input-append">
+									  <span class="add-on"><i class="icon-search"></i></span>
+									  <input class="span4" id="prependedInput" type="text" data-provide="typeahead" autocomplete="off" placeholder="输入关键字检索">
+									  <button class="btn" type="button">搜索</button>
+									</div>
+									<ul contenteditable="true" class="unstyled inline text-left">
+									  <li>新闻资讯</li>
+									  <li>体育竞技</li>
+									  <li>娱乐八卦</li>
+									  <li>前沿科技</li>
+									  <li>网络游戏</li>
+									</ul>
+								</div>
+							  <div class="tab-pane" id="messages">
+								<div class="input-prepend input-append">
+									  <span class="add-on"><i class="icon-search"></i></span>
+									  <input class="span4" id="prependedInput" type="text" data-provide="typeahead" autocomplete="off" placeholder="输入关键字检索">
+									  <button class="btn" type="button">搜索</button>
+									</div>
+									<ul contenteditable="true" class="unstyled inline text-left">
+									  <li>新闻资讯</li>
+									  <li>体育竞技</li>
+									  <li>娱乐八卦</li>
+									  <li>前沿科技</li>
+									</ul>
+								</div>
+							  <div class="tab-pane" id="settings">
+									<div class="input-prepend input-append">
+									  <span class="add-on"><i class="icon-search"></i></span>
+									  <input class="span4" id="prependedInput" type="text" data-provide="typeahead" autocomplete="off" placeholder="输入关键字检索">
+									  <button class="btn" type="button">搜索</button>
+									</div>
+									<ul contenteditable="true" class="unstyled inline text-left">
+									  <li>新闻资讯</li>
+									  <li>体育竞技</li>
+									  <li>娱乐八卦</li>
+									  <li>前沿科技</li>
+									  <li>环球财经</li>
+									</ul>
+								</div>
+							</div>
+</div>
+						<!-- <script>
+							  $(function () {
+								$('#myTab a:last').tab('show');
+							  })
+							</script> -->
+								
+						<!--</form> -->
+						<div class="span9">
+						
+						<ol class="faq-list">
+							
+							<li>	
+									<h4>美研制出按需透光的智能玻璃</h4>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据物理学家组织网近日报道，美国劳伦斯伯克利国家实验室借助纳米结晶技术，开发出一种能让门窗更聪明的智能玻璃。这种玻璃中嵌入了一层超薄纳米涂层，可按需调整进入玻璃的光线，能做到明暗可控、冷热可调，有望大幅降低建筑的空调和照明开支。相关研究发表在《自然》杂志上。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;与现有的技术不同，该涂层可实现对可见光与产生热量的近红外（NIR）光的选择性控制，以便在不同的气候条件下最大限度地保证舒适性和节约能源。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;领导该项目的劳伦斯伯克利国家实验室化学家迪莉娅·米莉蓉说：“在美国，我们所消耗的所有能源中大约有四分之一用于建筑的照明、取暖和制冷。目前城市中的不少建筑都被大量的玻璃所覆盖，新材料的使用将大幅提高这类建筑的能源使用效率。”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;米莉蓉的研究小组此前因研制出能够阻挡近红外光而让可见光通过的隔热玻璃而为世人所知，该技术的关键在于电致变色效应。新研究要求他们的技术达到一个新高度，做到对可见光和近红外光的独立控制。这意味着使用者能够在不增加额外热量的情况下，保证室内的采光，从而减少对空调和人工照明的依赖。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新技术核心是一种经过重新设计的电致变色材料，由氧化铟锡纳米晶体和嵌入在玻璃基质中氧化铌组成。除了能分别控制可见光和近红外光，采用这一技术的窗户还能按需切换到遮光模式（同时屏蔽近红外光和可见光）或全明模式（让所有光线毫无阻挡地进入室内）。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;研究人员发现，纳米晶体在玻璃中微小区域的协同交互作用可增强电致变色效应，这意味着可以在不牺牲性能的前提下进一步降低涂层的厚度。最关键的是，这种纳米晶体玻璃界面的原子连接方式导致了玻璃基质结构的重排，其拓展了玻璃基体的内部空间，使电荷的移动和进出更加容易，这也为新型电池材料的研发提供了思路。而从材料设计的角度来看，他们证明了能够用在单一同质材料中增加不同材料的方式来赋予其新特性。</p>	
+									
+							</li>
+							
+							<li>
+									<h4>固体系统首次实现信息隐形传输</h4>
+									<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;据物理学家组织网报道，苏黎世联邦理工学院（ETH）科学家首次在一个类似计算机芯片的电子电路中，将信息从其一角“隐形传输”到了另一角。研究人员指出，这是首次在一个固体系统中成功实现了量子态信息隐形传输，从发送方到接收方不用传输信息载体，这种电路是未来构建量子计算机的重要一环。相关论文发表在最近出版的《自然》杂志上。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实验设备类似于传统计算机芯片，并在发送方和接收方之间建立起量子纠缠。研究人员在设备一个角编制了一点量子信息作为发送方A，信息从这个角到它的对角B实现了“隐形传输”，空间距离约6毫米。“量子隐形传输可以和科幻电影《星际迷航》中的光束传输相媲美。”该研究负责人、苏黎世联邦理工学院物理系教授安德里亚·沃拉夫说，“信息不会从A点旅行到B点，而是在A点消失，在B点出现，此时我们在B点读取出来。”<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一年前，奥地利科学家实现了在两个岛之间超过100公里距离的量子态信息隐形远传。与该实验相比，6毫米距离好像是太短了。研究人员解释称，以往实验是在一个光学系统中用可见光进行的量子隐形传输，而此次实验是在一个由超导电路构成的固体系统中实现的。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个超导电路系统还有一个优势，就是速度极快，每秒大约能远传1万个量子比特，远远超过以往的大多数隐形传输系统。“隐形传输是量子信息处理领域的一项重要未来技术，”沃拉夫说，量子比特可以存储更多信息，效率也更高，而这种电路是未来构建量子计算机的重要因素。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下一步，研究人员打算增加从发送方到接收方之间的距离，还将实验从一个芯片到另一个芯片之间的隐形传输。长期目标则是探索用电子电路实现远程量子通讯，并使之能与当前的光学系统相媲美。</p>				
+							</li>
+							
+						</ol>
+										
+					</div> <!-- /widget-content -->
+						
+				</div> <!-- /widget -->	
+				
+				
+				
+		     </div> <!-- /span8 -->
+
+	      </div> <!-- /row -->
+	
+	    </div> <!-- /container -->
+    
+	</div> <!-- /main-inner -->
+	    
+</div> <!-- /main -->
+    
+
+
+<div class="extra">
+
+	<div class="extra-inner">
+
+		<div class="container">
+
+			<div class="row">
+				
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">关于</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">关于我们</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">中国工程院</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">清华大学</p></a></li>	
+						<li><a href="javascript:;"><p class="text-center">联系我们</p></a></li>						
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">支持</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">常见问题</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">提问</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">视频教程</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">发送反馈</p></a></li>						
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    			<div class="span4">
+    				
+    				<h4><p class="text-center">法律</p></h4>
+    				
+    				<ul>
+    					<li><a href="javascript:;"><p class="text-center">客户隐私政策</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">适用条款</p></a></li>
+    					<li><a href="javascript:;"><p class="text-center">安全</p></a></li>
+    				</ul>
+    				
+    			</div> <!-- /span4 -->
+    			
+    		</div> <!-- /row -->
+
+		</div> <!-- /container -->
+
+	</div> <!-- /extra-inner -->
+
+</div> <!-- /extra -->
+
+
+    
+    
+<div class="footer">
+	
+	<div class="footer-inner">
+		
+		<div class="container">
+			
+			<div class="row">
+				
+    			<div class="span12">
+    				<p class="text-center">&copy; 2013&nbsp;&nbsp;<a href="./首页.html">战略性新兴产业专业知识服务系统</a>.</p>
+    			</div> <!-- /span12 -->
+    			
+    		</div> <!-- /row -->
+    		
+		</div> <!-- /container -->
+		
+	</div> <!-- /footer-inner -->
+	
+</div> <!-- /footer -->
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<!-- <script src="./js/jquery-1.7.2.min.js"></script> -->
+
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+<script src="./js/faq.js"></script>
+
+<script>
+
+/*$(function () {
+	
+	$('.faq-list').goFaq ();
+
+});*/
+
+</script>
+  </body>
+</html>

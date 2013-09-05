@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Account - Base Admin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="./css/bootstrap.min.css" rel="stylesheet" />
+<link href="./css/bootstrap-responsive.min.css" rel="stylesheet" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+<link href="./css/font-awesome.css" rel="stylesheet" />
+<link href="./css/base-admin.css" rel="stylesheet" />
+<link href="./css/base-admin-responsive.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/wenku/basecss_30bcdd15.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/framework_3375814c.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/module_07574303.css" />
+<link rel="stylesheet" type="text/css" href="css/wenku/index_63a3cee6.css" />
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="./"> 战略性新兴产业专业知识服务系统 </a>
+      <div class="nav-collapse">
+        <ul class="nav pull-right">
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-cog"></i> Settings <b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;">Account Settings</a></li>
+              <li><a href="javascript:;">Privacy Settings</a></li>
+              <li class="divider"></li>
+              <li><a href="javascript:;">Help</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-user"></i> Rod Howard <b class="caret"></b> </a>
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;">My Profile</a></li>
+              <li><a href="javascript:;">My Groups</a></li>
+              <li class="divider"></li>
+              <li><a href="javascript:;">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="navbar-search pull-right" />
+        
+        <input type="text" class="search-query" placeholder="Search" />
+        </form>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /navbar-inner -->
+</div>
+<!-- /navbar -->
+<div class="subnavbar">
+  <div class="subnavbar-inner">
+    <div class="container">
+      <ul class="mainnav">
+        <li> <a href="./"> <i class="icon-home"></i> <span>首页</span> </a> </li>
+        <li> <a href="./pricing.html" class="dropdown-toggle"> <i class="icon-th-large"></i> <span>专家圈</span> </a> </li>
+        <li> <a href="./reports.html"> <i class="icon-bar-chart"></i> <span>协同办公</span> </a> </li>
+        <li> <a href="./faq.html"> <i class="icon-pushpin"></i> <span>知识搜索</span> </a> </li>
+        <li class="active dropdown"> <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="icon-share-alt"></i> <span>更多</span> <b class="caret"></b> </a>
+          <ul class="dropdown-menu">
+            <li><a href="./charts.html">图表统计</a></li>
+            <li><a href="./account.html">用户账户</a></li>
+            <li class="divider"></li>
+            <li><a href="./login.html">登录</a></li>
+            <li><a href="./signup.html">注册</a></li>
+            <li><a href="./error.html">错误页面</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /subnavbar-inner -->
+</div>
+<!-- /subnavbar -->
+<div class="main">
+  <div class="main-inner">
+    <div class="container">
+        <!-- 	<div id="userbar"></div>
+	<div id="header" class="grid">
+	  <div id="search" class="clearfix">
+	    <div id="logo"><a title="到首页" href="#" class="nslog:1008"><img width="137" height="46" src="img/wenku/logo-baike.png" /></a> </div>
+	    <div id="search-content">
+	      <p class="nv nslog-area:1009" log-data-detail="{page:'index'}"><a wdfield="q" href="#" >&#26032;&#38395;</a><a wdfield="q" href="#" >&#32593;&#39029;</a><a wdfield="q" href="#">&#36148;&#21543;</a><a wdfield="q" href="#">&#30693;&#36947;</a><a wdfield="q" href="#">&#38899;&#20048;</a><a wdfield="q" href="#">&#22270;&#29255;</a><a wdfield="q" href="#">&#35270;&#39057;</a><a wdfield="q" href="#">&#22320;&#22270;</a><strong>&#30334;&#31185;</strong><a wdfield="q" href="#">&#25991;&#24211;</a></p>
+	      <form action="/search/word" id="f1" method="get" name="f1" target="_self">
+	        <span class="s_ipt_wr"><span>
+	        <input class="s_ipt" x-webkit-speech="true" id="word" maxlength="100" name="word" tabindex="1" value="">
+	        </span></span><span class="s_btn_wr" style="margin-right:6px"><span>
+	        <input class="s_btn nslog:1010" onMouseDown="this.className='s_btn s_btn_h nslog:1010';" onMouseOut="this.className='s_btn nslog:1010';" tabindex="2" type="submit" value="搜&nbsp;索" style="z-index: 9; position: relative;">
+	        </span></span></span></span>
+	      </form>
+	    </div>
+	  </div>
+	</div> -->
+        <div class="navbar" style="width:100%;margin:0 auto;" align="center">
+          <div class="navbar-inner">
+            <div class="container-fluid">
+              <div class="nav-collapse collapse navbar-responsive-collapse">
+                <ul class="nav" contenteditable="true">
+                  <li class="active"><a href="#">主页</a></li>
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">分类频道 <i class="icon-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" >自然</a></li>
+                        <li><a href="#" >文化</a></li>
+                        <li><a href="#" >地理</a></li>
+                        <li><a href="#" >历史</a></li>
+                        <li><a href="#" >生活</a></li>
+                        <li><a href="#" >社会</a></li>
+                        <li><a href="#" >艺术</a></li>
+                        <li><a href="#" >人物</a></li>
+                        <li><a href="#" >经济</a></li>
+                        <li><a href="#" >科技</a></li>
+                        <li><a href="#" >体育</a></li>
+                    </ul>
+                  <li><a href="#">核心用户</a></li>
+                  <li><a href="#">商城</a></li>
+                  <li><a href="#">合作</a></li>
+                  <li><a href="#">数字博物馆</a></li>
+                  <li><a href="#">掌上</a></li>
+                  <li><a href="#">优秀词条</a></li>
+                  <li class="divider-vertical"></li>
+                  <form class="navbar-form pull-left">
+                      <input type="text" class="span2">
+                      <button type="submit" class="btn">搜索</button>
+                    </form>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.nav-collapse -->
+            </div>
+          </div>
+          <!-- /navbar-inner -->
+        </div>
+<!--        <div id="top-wrap" class="top-wrap " >
+          <div class="grid">
+            <div class="g-row nav-container">
+              <ul class="nav1 clearfix nslog-area:1000">
+                <li class="first"><span class="split-line"><a href="#" class="cur">首页</a></span></li>
+                <li class="category"><span class="split-line"><a href="#" class="">分类频道</a></span><span class="ico"></span></li>
+                <li><span class="split-line"><a href="#">核心用户</a></span></li>
+                <li><span class="split-line"><a href="#">商城</a></span></li>
+                <li><span class="split-line"><a href="#">合作</a></span></li>
+                <li class="five"><span class="split-line"><a href="#">数字博物馆</a></span></li>
+                <li><span class="split-line"><a href="#">掌上</a></span></li>
+                <li><a href="#">优秀词条</a></li>
+                <li class="circle-right"></li>
+              </ul>
+              <ul class="subnav1 d-n clearfix nslog-area:6552">
+                <li><a href="#" >自然</a></li>
+                <li><a href="#" >文化</a></li>
+                <li><a href="#" >地理</a></li>
+                <li><a href="#" >历史</a></li>
+                <li><a href="#" >生活</a></li>
+                <li><a href="#" >社会</a></li>
+                <li><a href="#" >艺术</a></li>
+                <li><a href="#" >人物</a></li>
+                <li><a href="#" >经济</a></li>
+                <li><a href="#" >科技</a></li>
+                <li><a href="#" >体育</a></li>
+              </ul>
+              <script type="text/javascript">F.use("js/wenku/nav.js");</script>
+            </div>
+          </div>
+        </div>-->
+        <div  class="grid container">
+          <div class="g69 main">
+            <div class="g-row ">
+              <div class="recommendations slider-container box-index ">
+                <div class="clearfix title">
+                  <h3>每日推荐</h3>
+                  <a href="#" class="more nslog:6503" >更多</a></div>
+                <div class="btn-carousel nslog-area:6502" ><a href="#"  class="left arrow-left" id="btn_prev"></a>
+                  <div id="slide_dot" class="dot"></div>
+                  <a href="#"  class="right arrow-right" id="btn_next"></a></div>
+                <div class="slider-list articles clearfix" id="mrtj">
+                  <div class="slider-item f-l item">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6501"><img src="img/wenku/ce5fedae0bc80e6072def047b60b7f9d.jpg" width="270" height="146"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a href="#" class="nslog:6500">军情六处</a></h4>
+                        <p><a href="#">戴安娜王妃</a>车祸原因公开，英国军情六处或为主谋。军情六>英国陆军情报六局。从伊丽莎白的开创初期至今，都是受到严格保密的，也称秘密情报处，原为英国情报机构海外谍报系统。与美国中央情报局俄罗斯克格勃和以色列摩萨德一起，并称为“世界四大情报组织”。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item f-l item">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6501"><img src="img/wenku/87509d2d672e5c3bfba20f0685c49577.jpg" width="270" height="146"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a href="#" class="nslog:6500">天眼猫</a></h4>
+                        <p>8月30日，<a href="#">内江</a>一市民家中的猫产下3只小猫，其中一只猫长相奇异，没有猫鼻子，只有额头正中间长有一只眼睛。猫主人说这只猫看起来挺可爱，没过多久却<a href="#">夭折</a>了。宠物医院医生称，该猫长相奇特可能是属于<a href="#">基因变异</a>所致，没有鼻子可能是夭折的原因。猫主人表示，小猫的尸体将被制成标本保存。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-item f-l item">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6501"><img src="img/wenku/ef83991bcb4d689d9c09538539bb49ec.jpg" width="270" height="146"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a href="#" class="nslog:6500"><img title="优秀词条" class="ex-icon" src="img/wenku/ex_icon.gif" width="22" height="25" />优秀词条：罗布泊</a></h4>
+                        <p>罗布泊，中国新疆维吾尔自治区东南部湖泊。海拔780公尺左右，位于塔里木盆地的最低处。蒙古语罗布泊即多水汇入之湖。古代称泑泽、盐泽、蒲昌海等。公元330年以前湖水较多，西北侧的楼兰城为著名的咽喉。为中国第二大咸水湖。现仅为大片盐壳。&nbsp;<a href="#" class="more3 nslog:6500">阅读全文</a>|<a href="#" target="_blank">更多优秀词条</a>|<a href="#" target="_blank">优秀词条候选</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="g-row">
+              <div class="g20 ">
+                <div class="hot-entry  nslog-area:6508">
+                  <h3>热门词条榜</h3>
+                  <ol>
+                    <li class="num1"><span>1</span><a href="#">魅族mx3</a></li>
+                    <li class="num2"><span>2</span><a href="#">小爸爸</a></li>
+                    <li class="num3"><span>3</span><a href="#">陈凯琳</a></li>
+                    <li class="num4"><span>4</span><a href="#">李宗瑞</a></li>
+                    <li class="num5"><span>5</span><a href="#">定制公交</a></li>
+                    <li class="num6"><span>6</span><a href="#">郭跃</a></li>
+                    <li class="num7"><span>7</span><a href="#">房产泡沫</a></li>
+                    <li class="num8"><span>8</span><a href="#">老公的春天</a></li>
+                    <li class="num9"><span>9</span><a href="#">朱彦超</a></li>
+                    <li class="num10"><span>10</span><a href="#">纪委监察网</a></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="g45 g-a4 ">
+                <div class="hot-concerns ">
+                  <div class="clearfix title">
+                    <h3>热点关注</h3>
+                    <a href="#" class="more nslog:6542" >更多</a></div>
+                  <ul class="clearfix">
+                    <li>
+                      <div class="clearfix article">
+                        <div class="pic nslog:6504"><a href="#"><img src="img/wenku/f4f65c554b6f50b1f940bd91021b7598.jpg" width="120" height="90"/>
+                          <div class="img-border"></div>
+                          </a></div>
+                        <div class="g32 g-a1 content">
+                          <h4><a href="#" class="nslog:6505">康熙遗诏</a></h4>
+                          <p class="nslog-area:6506">辽宁档案馆首度展出分别用汉、满、蒙三种文字书写的“康熙遗诏”，证明雍正没有篡位。</p>
+                          <div class="related nslog-area:6507">相关词条：<a href="#" target="_blank">胤禛</a><span class="dot">·</span><a href="#" target="_blank">年羹尧</a><span class="dot">·</span><a href="#" target="_blank">胤禩</a></div>
+                        </div>
+                        <span class="line-pad"></span></div>
+                    </li>
+                    <li>
+                      <div class="clearfix article">
+                        <div class="pic nslog:6504"><a href="#"><img src="img/wenku/6842305b6d5b23fd58c3ffdeca4c9766.jpg" width="120" height="90"/>
+                          <div class="img-border"></div>
+                          </a></div>
+                        <div class="g32 g-a1 content">
+                          <h4><a href="#" class="nslog:6505">拥堵费</a></h4>
+                          <p class="nslog-area:6506">在交通拥挤时段对部分区域道路使用者收取的一定费用。9月1日北京环保局要求征收交通拥堵费。</p>
+                          <div class="related nslog-area:6507">相关词条：<a href="#" target="_blank">新加坡</a><span class="dot">·</span><a href="#" target="_blank">曼哈顿</a><span class="dot">·</span><a href="#" target="_blank">斯德哥尔摩</a></div>
+                        </div>
+                        <span class="line-pad"></span></div>
+                    </li>
+                  </ul>
+                </div>
+                <script>window.PDC && PDC.first_screen && PDC.first_screen();</script>
+              </div>
+            </div>
+            <div class="g-row">
+              <div class="banner nslog:6543"><a href="#" target="_blank"><img src="img/wenku/harbin690X90.jpg" width="690" height="90"/></a></div>
+            </div>
+            <div class="g-row">
+              <div class="g20">
+                <div class="historic-days " id="days">
+                  <div class="clearfix title">
+                    <h3>历史上的今天</h3>
+                    <a href="#" class="more nslog:6546">更多</a></div>
+                  <div class="date"><a  href="#" class="left nslog:6513"></a><span class="today">loading</span><a  href="#" class="right nslog:6513"></a></div>
+                  <div class="pic">
+                    <div class="img-border"></div>
+                    <a class="toL nslog:6552" href="#"><img src="img/wenku/blank.gif" width="200" height="150"/></a>
+                    <p class="shadow"></p>
+                    <p class="nslog-area:6515">loading</p>
+                  </div>
+                  <ul class="nslog-area:6515">
+                    loading
+                  </ul>
+                </div>
+                <!-- <script type="text/javascript">F.use("/static/widget/index/index/historic/historic.js")</script>-->
+              </div>
+              <div class="g45 g-a4">
+                <div class="baike-characters area  ">
+                  <div class="clearfix title">
+                    <h3>人物</h3>
+                    <a href="#" class="more nslog:6547" >更多</a></div>
+                  <div class="clearfix article">
+                    <div class="pic"><a href="#" class="nslog:6510"><img src="img/wenku/49cdb4ef5d225e084cbd6d504e0344b3.jpg" width="120" height="90"/>
+                      <div class="img-border"></div>
+                      </a></div>
+                    <div class="g32 g-a1 content">
+                      <h4><a href="#" class="nslog:6509">蒋洁敏</a></h4>
+                      <p class="nslog-area:6512">国资委主任、中石油前董事长蒋洁敏因涉嫌严重违纪被免职，曾助薄熙来提升政绩。</p>
+                      <div class="related nslog:6511">相关词条：<a href="#" target="_blank">马富才</a><span class="dot">·</span><a href="#" target="_blank">停牌</a><span class="dot">·</span><a href="#" target="_blank">国资委</a></div>
+                    </div>
+                  </div>
+                  <ul class="nslog-area:6512">
+                    <li><a href="#" onClick="nslog(this.href,116)">玄松月</a>：金正恩前女友，因涉嫌拍摄性爱视频被公开枪决<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                    <li><a href="#" onClick="nslog(this.href,116)">陈妍希</a>：于正版《神雕侠侣》小龙女饰演者，试装照被吐槽像哪吒<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                    <li><a href="#" onClick="nslog(this.href,116)">莫妮卡·贝鲁奇</a>：意大利性感女星，8月与影星丈夫结束14年婚姻<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                    <li><a href="#" onClick="nslog(this.href,116)">郭晶晶</a>：8月27日，“跳水女皇”郭晶晶在香港诞下霍家第四代长孙<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                    <li><a href="#" onClick="nslog(this.href,116)">王立军</a>：原重庆市副市长，薄熙来称其暗恋谷开来不能自拔<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                    <li><a href="#" onClick="nslog(this.href,116)">薛蛮子</a>：微博名人，知名投资人。8月23日因涉嫌嫖娼被行拘<a href="#" class="detail"  onclick="nslog(this.href,117)">详情</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="g-row">
+              <div class="banner nslog:6544"><a href="#" target="_blank"><img src="img/wenku/8272048682cd6d442bdb9c3ba03e25cb.jpg" width="690" height="90"/></a></div>
+            </div>
+            <div class="g-row ">
+              <div class="classification clearfix  ">
+                <div class="nature-geog">
+                  <div class="clearfix title nslog-area:6518">
+                    <h3 class="">分类</h3>
+                    <h4><a href="#">自然</a>·<a href="#">地理</a></h4>
+                  </div>
+                  <div class="news-list">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/12668eb9fd6f4cf7f68dbc74d1167ade.jpg" width="110" height="83"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a class="nslog:6522" href="#">鹿蛾</a></h4>
+                        <p>鹿蛾科小至中等大蛾类，外形似斑蛾或黄蜂，但飞翔力弱。</p>
+                        <div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">鹿蛾科</a><span class="dot">·</span><a href="#" target="_blank">元宝枫细蛾</a></div>
+                      </div>
+                    </div>
+                    <ul class="nslog:6522">
+                      <li><a href="#" >海珠桥</a>：2013年9月1日修复后正式恢复通车<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >阿塔卡马沙漠</a>：世界上最干旱地区之一<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >叶尾壁虎</a>：自然界的伪装大师，可变成多种颜色<a href="#" class="detail" >详情</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="culture-art">
+                  <div class="clearfix title nslog-area:6518">
+                    <h3 class="">分类</h3>
+                    <h4><a href="#">文化</a>·<a href="#">艺术</a></h4>
+                  </div>
+                  <div class="news-list">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/47c4ae3a99de0df824d120cb0effd1d7.png" width="110" height="83"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a class="nslog:6522" href="#">开笔礼</a></h4>
+                        <p>古时，“开笔礼”是极为隆重的典礼，被称为人生四大礼之一。</p>
+                        <div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">礼书</a><span class="dot">·</span><a href="#" target="_blank">成人礼</a></div>
+                      </div>
+                    </div>
+                    <ul class="nslog:6522">
+                      <li><a href="#" >香港小姐</a>：2013年竞选决赛中陈凯琳夺冠<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >波尔卡</a>：舞者们常站成一个圆圈半步半步地跳<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >威尼斯国际电影节</a>：于2013年8月29日在威尼斯开幕<a href="#" class="detail" >详情</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="science-technology">
+                  <div class="clearfix title nslog-area:6518">
+                    <h3 class="">分类</h3>
+                    <h4><a href="#">科学</a>·<a href="/keji">技术</h4>
+                  </div>
+                  <div class="news-list">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/368034df66382c978fadc4e18c4730c6.jpg" width="110" height="83"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a class="nslog:6522" href="#">uup</a></h4>
+                        <p>一种人工合成的放射性化学元素，属于弱金属之一。</p>
+                        <div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">弱金属</a><span class="dot">·</span><a href="#" target="_blank">稳定岛</a></div>
+                      </div>
+                    </div>
+                    <ul class="nslog:6522">
+                      <li><a href="#" >液氨泄漏报警器</a>：由探测器与报警控制主机构成<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >PLU码</a>：进口农产品上所贴标签上4-5位的数字<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >嫦娥三号卫星</a>：将于2013年年底择机发射<a href="#" class="detail" >详情</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="society-life">
+                  <div class="clearfix title nslog-area:6518">
+                    <h3 class="">分类</h3>
+                    <h4><a href="#">社会</a>·<a href="#">生活</a></h4>
+                  </div>
+                  <div class="news-list">
+                    <div class="clearfix article">
+                      <div class="pic"><a href="#" class="nslog:6520" ><img src="img/wenku/0db7030dcbd9b4a99d60e748f040b646.jpg" width="110" height="83"/>
+                        <div class="img-border"></div>
+                        </a></div>
+                      <div class="content">
+                        <h4><a class="nslog:6522" href="#">啃椅族</a></h4>
+                        <p>在快餐店内买杯饮料一坐大半天的学生或情侣，指快餐店里的长座客。</p>
+                        <div class="related nslog-area:6521">相关词条：<a href="#" target="_blank">啃老族</a><span class="dot">·</span><a href="#" target="_blank">尼特族</a></div>
+                      </div>
+                    </div>
+                    <ul class="nslog:6522">
+                      <li><a href="#" >麦难民</a>：因无法支付房租而在麦当劳蹭住的人<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >开学综合症</a>：学生不适应新学期的病态表现<a href="#" class="detail" >详情</a></li>
+                      <li><a href="#" >中国最适宜退休城市榜单</a>：杭州成为最适宜退休城市<a href="#" class="detail" >详情</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="g-row ">
+              <div class="pictures area ">
+                <div class="clearfix title">
+                  <h3>每日图片</h3>
+                </div>
+                <div class="items clearfix nslog-area:6516" id="mrtpScroll">
+                  <div class="item"><a href="#" class=""><img src="img/wenku/6059ef5004e4f933a83c7929d65d7f21.png" width="155" height="117"/>
+                    <div class="img-border"></div>
+                    </a><span class="shadow"></span><span class="name"><a href="#">鳄鱼残忍吞食海龟 </a></span></div>
+                  <div class="item"><a href="#" class=""><img src="img/wenku/17a017e4587bba037e59dce2b95f221b.png" width="155" height="117"/>
+                    <div class="img-border"></div>
+                    </a><span class="shadow"></span><span class="name"><a href="#">美女与致命鲨鱼同游</a></span></div>
+                  <div class="item"><a href="#" class=""><img src="img/wenku/18727ac9b1301e07885276d946b551cb.jpg" width="155" height="117"/>
+                    <div class="img-border"></div>
+                    </a><span class="shadow"></span><span class="name"><a href="#">埃及白沙漠</a></span></div>
+                  <div class="item"><a href="#" class=""><img src="img/wenku/17cd4da75d1ca699ed80750e35ad51f1.png" width="155" height="117"/>
+                    <div class="img-border"></div>
+                    </a><span class="shadow"></span><span class="name"><a href="#">俄罗斯国际航展开幕</a></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="g-row">
+              <div class="category-navigation clearfix nslog-area:6523 ">
+                <h3>分类导航</h3>
+                <ul>
+                  <li class="column">
+                    <h4><a  href="#">人物</a></h4>
+                    <h5><a href="#">动漫人物</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">歌手</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">运动员</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">古代嫔妃</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">演员</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">文化</a></h4>
+                    <h5><a href="#">考古</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">网络用语</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">世界名著</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">诗词</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">神话</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+                <ul class="even">
+                  <li class="column">
+                    <h4><a href="#">技术</a></h4>
+                    <h5><a href="#">土木工程</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">移动通信</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">CPU</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">MP3</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">电脑病毒</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">历史</a></h4>
+                    <h5><a href="#">侏罗纪</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">清朝</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">明朝</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">洋务运动</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">先秦</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="column">
+                    <h4><a href="#">艺术</a></h4>
+                    <h5><a href="#">纪念碑</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">戏剧</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">音乐</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">绘画</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">雕塑</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">建筑</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">生活</a></h4>
+                    <h5><a href="#">影视</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">动漫</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">游戏</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">服饰</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">美容</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">烹饪</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+                <ul class="even">
+                  <li class="column">
+                    <h4><a href="#">地理</a></h4>
+                    <h5><a href="#">大陆架</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">国家</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">地质</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">岛屿</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">山脉</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">河流</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">社会</a></h4>
+                    <h5><a href="#">外交</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">军事</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">民俗</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">交通</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">法律</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">企业</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="column">
+                    <h4><a href="#">体育</a></h4>
+                    <h5><a href="#">冰雪运动</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">极限运动</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">电子竞技</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">篮球</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">足球</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">自然</a></h4>
+                    <h5><a href="#">地震</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">气象</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">天文</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">花卉</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">恐龙</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">细菌</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+                <ul class="even">
+                  <li class="column">
+                    <h4><a href="#">科学</a></h4>
+                    <h5><a href="#">生物</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">遗传学</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">医学</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">化学</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">物理</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">数学</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                  <li>
+                    <h4><a href="#">经济</a></h4>
+                    <h5><a href="#">投资</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">保险</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">银行</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">期货</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">基金</a></h5>
+                    <span class="line"></span>
+                    <h5><a href="#">股票</a></h5>
+                    <h5 class="more"><a href="#">&gt;&gt;</a></h5>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="g25 g-a4">
+            <div class=" btn-entry clearfix"><a href="#" class="create-entry nslog:6540 btn-small btn-info">创建词条</a><a href="#" class="perfect-entry nslog:6541">完善词条</a></div>
+            <div id="new-publicizing" class="d-n">
+              <div class="publicizing-implementation-min ">
+                <div class="slogan"><img alt="" src="img/wenku/lg1_5bfc02d3.png"></div>
+                <p>百度是<span>人人可编辑</span>的全书</p>
+                <div class="user clearfix"><em>已有</em>
+                  <div class="users" id="totalEditUser1"></div>
+                  <em class="user-pos">用户</em></div>
+                <div class="lemma clearfix"><em>贡献</em>
+                  <div class="entry" id="totalLemma1"></div>
+                  <em class="lemma-pos">词条</em></div>
+                <div class="btn-entry-new clearfix"><a href="#" class="create nslog:6553">创建词条</a><a href="#" class="perfect nslog:6554">完善词条</a></div>
+                <!--         <script type="text/javascript">F.use(["js/wenku/base.js","js/wenku/publicizing_min.js"],function(baidu,publicizing_min){baidu(document).ready(function(){ publicizing_min.init()})});</script> -->
+              </div>
+            </div>
+            <div class="notice clearfix  ">
+              <div class="clearfix title">
+                <h3>公告区</h3>
+                <a href="#" class="more" target="_blank">更多</a></div>
+              <ul>
+                <li><a href="#">明星人气大PK！谁能代表哈尔滨</a></li>
+                <li><a href="#">【mini】哈尔滨城市</a></li>
+                <li><a href="#">全国首家全景博物馆震撼上线</a></li>
+                <li><a href="#">下载体验全新2.0版客户端</a></li>
+                <li><a href="#">趣味冷知识，尽在官方微信</a></li>
+              </ul>
+            </div>
+            <div class="academic-council clearfix ">
+              <div class="clearfix title">
+                <h3>学术委员会</h3>
+                <a href="#" class="more nslog:6525" target="_blank">更多</a></div>
+              <div class="member clearfix">
+                <div class="pic"><a href="#" class="nslog:6524"><img src="img/wenku/14ddc9843a770adc524692b43acd2a43.jpg" width="55" height="55"/>
+                  <div class="img-border"></div>
+                  </a></div>
+                <div class="g-a1 content">
+                  <h4><a href="#" class="more nslog:6524">丁大卫</a></h4>
+                  <p>国际著名金融专家、教...</p>
+                </div>
+              </div>
+              <ul>
+                <li>专业领域：金融学</li>
+                <li>审定词条：<span class="num">134</span>个</li>
+              </ul>
+              <a href="#" class="apply nslog:6526">我要申请</a>
+              <div class="statistics">学术委员会已有<span class="num">12</span>个领域专家<span class="num">643</span>位</div>
+            </div>
+            <div class="baike-star ">
+              <div class="g-row title">
+                <h3>之星</h3>
+                <a href="#" class="more nslog:6548" target="_blank">更多</a></div>
+              <div class="g-row member">
+                <div class="pic"><a href="#" class="nslog:6527"><img src="img/wenku/0bd162d9f2d3572c3fab510d8b13632763d0c392.jpg" width="55" height="55"/>
+                  <div class="img-border"></div>
+                  </a></div>
+                <div class="g-a1 content">
+                  <h4><a href="#" class="nslog:6527">yangzhemin12</a></h4>
+                  <p>太子少师十级</p>
+                </div>
+              </div>
+              <ul class="g-row">
+                <li class="column ">创建词条：<span class="num">1042</span></li>
+                <li>编辑词条：<span class="num">14571</span></li>
+                <li class="column">初级优质：<span class="num">35</span></li>
+                <li>中级优质：<span class="num">23</span></li>
+              </ul>
+            </div>
+            <div class="teamapply clearfix ">
+              <div>
+                <h3><a href="#" class="nslog:6549">百度蝌蚪团</a></h3>
+                <p>已有<span class="num">110</span>位成员</p>
+                <a href="#" class="apply nslog:6529">我要申请</a></div>
+            </div>
+            <div class="teamapply clearfix box-extend">
+              <div>
+                <h3><a href="#" class="nslog:6550">百度知识先锋</a></h3>
+                <p>已有<span class="num">8047</span>位成员</p>
+                <a href="#" class="apply nslog:6526">我要申请</a></div>
+            </div>
+            <div class="teamapply clearfix box-extend">
+              <div>
+                <h3><a href="#" class="nslog:7402">百度编修院</a></h3>
+                <p>已有<span class="num">116</span>位成员</p>
+                <a href="#" class="apply nslog:999999">我要申请</a></div>
+            </div>
+            <div class="billboard clearfix " id="billboard">
+              <div class="clearfix title">
+                <h3>用户排行榜</h3>
+                <a href="#" class="more nslog:6551" target="_blank">更多</a></div>
+              <div class="clearfix lastweek tabs"><a href="#" class="cur">上周贡献榜</a><a href="#" class="no-cur">上周优质版本</a></div>
+              <div class="tab-content">
+                <ol class="nslog-area:6531">
+                  <li class="clearfix num1"><span class="ranking">1</span><a href="#">markzmj</a><span class="score">1570</span></li>
+                  <li class="clearfix num2"><span class="ranking">2</span><a href="#">QQBIDUOK28</a><span class="score">1534</span></li>
+                  <li class="clearfix num3"><span class="ranking">3</span><a href="#">gzyfzlvip</a><span class="score">1533</span></li>
+                  <li class="clearfix num4"><span class="ranking">4</span><a href="#">ktdh123</a><span class="score">1518</span></li>
+                  <li class="clearfix num5"><span class="ranking">5</span><a href="#">无形雨</a><span class="score">1514</span></li>
+                </ol>
+                <ol class="d-n nslog-area:6532">
+                  <li class="clearfix num1"><span class="ranking">1</span><a href="#">东篱小菊</a><span class="score">9</span></li>
+                  <li class="clearfix num2"><span class="ranking">2</span><a href="#">朝阳山人</a><span class="score">4</span></li>
+                  <li class="clearfix num3"><span class="ranking">3</span><a href="#">d15055037840</a><span class="score">1</span></li>
+                  <li class="clearfix num4"><span class="ranking">4</span><a href="#">辰猫暮雪</a><span class="score">1</span></li>
+                  <li class="clearfix num5"><span class="ranking">5</span><a href="#">水幽草0x0</a><span class="score">1</span></li>
+                </ol>
+              </div>
+              <a href="#" class="all nslog:6534" target="_blank">查看总贡献榜</a></div>
+            <!--     <script type="text/javascript">F.use('/static/widget/index/index/billboard/billboard.js');</script> -->
+            <div class="g-row ad-side nslog:nslog:6545   "><a href="#"><img src="img/wenku/c943c57ef68d4e8f86cbadffc1fee77f.png" width="210" height="70"/></a></div>
+            <div class="g-row ad-side nslog:nslog:6545  ad-side-last "><a href="#"><img src="img/wenku/20130828/20130828145957_43797.jpeg" width="210" height="70"/></a></div>
+            <div class="collaboration clearfix">
+              <div class="title clearfix">
+                <h3>合作平台</h3>
+                <a href="#" class="more" target="_blank">更多</a></div>
+              <p>目前已有<span class="num"><a href="#">154</a></span>家合作机构</p>
+              <ul>
+                <li>
+                  <div class="row1"><a href="#" class="nslog:6535">权威编辑</a>
+                    <p>编辑所属领域词条,获得权威展示</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="row2"><a href="#" class="nslog:6536">项目共建</a>
+                    <p>共建创新项目,共享项目成果</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="row3"><a href="#" class="nslog:6537">资源合作</a>
+                    <p>优质资源共融合,提升知识影响力</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="row4"><a href="#" class="nslog:6538">API输出</a>
+                    <p>引入内容,平台联手共赢</p>
+                  </div>
+                </li>
+                <li class="row5">
+                  <div class="row5"><a href="#" class="nslog:6539">活动合作</a>
+                    <p>联合发起各种活动,增强宣传力度</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!--     <script type="text/javascript">F.use("js/wenku/collaboration.js");</script> -->
+          </div>
+        </div>
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /main-inner -->
+</div>
+<!-- /main -->
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span3">
+          <h4>About</h4>
+          <ul>
+            <li><a href="javascript:;">About Us</a></li>
+            <li><a href="javascript:;">Twitter</a></li>
+            <li><a href="javascript:;">Facebook</a></li>
+            <li><a href="javascript:;">Google+</a></li>
+          </ul>
+        </div>
+        <!-- /span3 -->
+        <div class="span3">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="javascript:;">Frequently Asked Questions</a></li>
+            <li><a href="javascript:;">Ask a Question</a></li>
+            <li><a href="javascript:;">Video Tutorial</a></li>
+            <li><a href="javascript:;">Feedback</a></li>
+          </ul>
+        </div>
+        <!-- /span3 -->
+        <div class="span3">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="javascript:;">License</a></li>
+            <li><a href="javascript:;">Terms of Use</a></li>
+            <li><a href="javascript:;">Privacy Policy</a></li>
+            <li><a href="javascript:;">Security</a></li>
+          </ul>
+        </div>
+        <!-- /span3 -->
+        <div class="span3">
+          <h4>Settings</h4>
+          <ul>
+            <li><a href="javascript:;">Consectetur adipisicing</a></li>
+            <li><a href="javascript:;">Eiusmod tempor </a></li>
+            <li><a href="javascript:;">Fugiat nulla pariatur</a></li>
+            <li><a href="javascript:;">Officia deserunt</a></li>
+          </ul>
+        </div>
+        <!-- /span3 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /extra-inner -->
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span12"> &copy; 2012 <a href="http://bootstrapadmin.com">Base Admin</a>. </div>
+        <!-- /span12 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /footer-inner -->
+</div>
+<!-- /footer -->
+<script src="./js/jquery-1.7.2.min.js"></script>
+<script src="./js/bootstrap.js"></script>
+<script src="./js/base.js"></script>
+</body>
+</html>

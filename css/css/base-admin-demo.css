@@ -1,0 +1,21 @@
+#myTab{
+	border: 0;
+	background: none;
+	margin-bottom: 0;
+}
+#myTab .active a{
+	border: 0;
+}
+#myTab .active a:hover{
+	text-decoration:none;
+}
+#myTab li a:hover{
+	text-decoration:underline;
+	background: none;
+	border: none;
+}
+.myTab{
+	margin: 0 auto;
+	text-align: center;
+	margin-left:150px;
+}
